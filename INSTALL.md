@@ -20,20 +20,20 @@ Humanize KR은 **Claude Code**, **GitHub Copilot CLI**, **OpenAI Codex CLI**, **
 Claude Code 세션에서:
 
 ```
-/plugin marketplace add epoko77-ai/im-not-ai
-/plugin install humanize-korean@im-not-ai
+/plugin marketplace add teo713ko-gif/hangul-humanizer
+/plugin install humanize-korean@hangul-humanizer
 ```
 
 - 설치 후 새 세션에서 `/humanize-korean`(또는 `/humanize`, `/humanize-scan`, `/humanize-redo`), 혹은 자연어 트리거("이 글 AI 티 없애줘"·"이 글 AI 같아?")로 발동.
-- 업데이트: `/plugin marketplace update im-not-ai` 후 `/plugin update humanize-korean`.
+- 업데이트: `/plugin marketplace update hangul-humanizer` 후 `/plugin update humanize-korean`.
 - 제거: `/plugin uninstall humanize-korean`.
 - 구성요소: 스킬 4개(humanize-korean·humanize·humanize-scan·humanize-redo) + 서브에이전트 9개가 함께 설치됩니다.
 
 ### 방법 ② 클론 + 스크립트
 
 ```bash
-git clone https://github.com/epoko77-ai/im-not-ai.git
-cd im-not-ai
+git clone https://github.com/teo713ko-gif/hangul-humanizer.git
+cd hangul-humanizer
 ./install.sh --claude-only
 ```
 
@@ -50,23 +50,23 @@ cd im-not-ai
 ### 방법 ① 플러그인 마켓플레이스 — 클론 불필요 (권장)
 
 ```bash
-copilot plugin marketplace add epoko77-ai/im-not-ai
-copilot plugin install humanize-korean@im-not-ai
+copilot plugin marketplace add teo713ko-gif/hangul-humanizer
+copilot plugin install humanize-korean@hangul-humanizer
 copilot plugin list
 copilot skill list
 ```
 
 설치 후 새 Copilot 세션에서 `humanize-korean 스킬로 이 글의 AI 티를 없애줘:`처럼 요청하거나 자연어 트리거("이 글 AI 티 없애줘", "번역투 고쳐")를 사용합니다. 대화형 세션의 `/skills list`에서도 로드 여부를 확인할 수 있습니다.
 
-- 업데이트: `copilot plugin update humanize-korean@im-not-ai`
-- 제거: `copilot plugin uninstall humanize-korean@im-not-ai`
+- 업데이트: `copilot plugin update humanize-korean@hangul-humanizer`
+- 제거: `copilot plugin uninstall humanize-korean@hangul-humanizer`
 
 Copilot은 마켓플레이스의 `source: "./"`를 저장소 루트 `plugin.json`으로 해석해 `copilot/skills/humanize-korean`의 단일 호출 스킬을 로드합니다. 룰북은 Codex 패키지와 같은 SSOT를 참조하지만 `route_hint` 3경로 오케스트레이션, diagnostician, finalizer는 포함하지 않습니다.
 
 ### 방법 ② 저장소에서 직접 설치 — 호환성 전용
 
 ```bash
-copilot plugin install epoko77-ai/im-not-ai
+copilot plugin install teo713ko-gif/hangul-humanizer
 ```
 
 1.0.79-5에서는 정상 동작하지만 CLI가 저장소 직접 설치의 사용 중단 예정 경고를 표시합니다. 신규 설치에는 방법 ①을 사용하세요. Copilot용 수동 설치 모드는 따로 추가하지 않습니다.
@@ -78,8 +78,8 @@ copilot plugin install epoko77-ai/im-not-ai
 Codex 0.121.0 이상(1급 Skills 지원)이 필요합니다.
 
 ```bash
-git clone https://github.com/epoko77-ai/im-not-ai.git
-cd im-not-ai
+git clone https://github.com/teo713ko-gif/hangul-humanizer.git
+cd hangul-humanizer
 ./install.sh --codex-only
 ```
 
@@ -90,8 +90,8 @@ cd im-not-ai
 ## 한 번에 양쪽 모두 (Claude + Codex + Gemini)
 
 ```bash
-git clone https://github.com/epoko77-ai/im-not-ai.git
-cd im-not-ai
+git clone https://github.com/teo713ko-gif/hangul-humanizer.git
+cd hangul-humanizer
 ./install.sh            # 설치된 claude/codex/gemini를 자동 감지해 각각 연결
 ```
 
@@ -119,11 +119,11 @@ cd im-not-ai
   - `./update.sh --check` — 감지만(적용 안 함). 최신이면 종료코드 `0`, 업데이트 있으면 `10`.
   - `--copy`로 설치했다면 `./update.sh --copy --force`.
 - **수동** — `git pull`만 해도 심링크라 내용은 반영됩니다(신규 파일 연결은 `./install.sh` 한 번 더).
-- **Claude 마켓플레이스 설치** — Claude Code가 갱신을 관리합니다: `/plugin marketplace update im-not-ai` → `/plugin update humanize-korean`.
-- **GitHub Copilot 마켓플레이스 플러그인** — `copilot plugin update humanize-korean@im-not-ai`.
+- **Claude 마켓플레이스 설치** — Claude Code가 갱신을 관리합니다: `/plugin marketplace update hangul-humanizer` → `/plugin update humanize-korean`.
+- **GitHub Copilot 마켓플레이스 플러그인** — `copilot plugin update humanize-korean@hangul-humanizer`.
 - **주기적 무인 업데이트 (opt-in)** — 완전 자동 갱신을 원하면 cron/launchd로 `update.sh`를 거세요. 예(매주 월 09:00, 감지 시 적용):
   ```cron
-  0 9 * * 1  cd /path/to/im-not-ai && ./update.sh >> ~/.humanize-update.log 2>&1
+  0 9 * * 1  cd /path/to/hangul-humanizer && ./update.sh >> ~/.humanize-update.log 2>&1
   ```
   알림만 원하면 `./update.sh --check`를 사용하세요. ⚠️ 자동 적용은 upstream 코드를 자동으로 받아 연결하므로 **신뢰하는 저장소에만** 거세요.
 
@@ -132,8 +132,8 @@ cd im-not-ai
 AI가 제안한 한글 커밋 메시지의 사무적·번역투 어휘를 다듬는 별도 스킬입니다. humanize-korean과 무관한 독립 기능이라 기본 설치·마켓플레이스 플러그인 범위(`skills/`) 밖 — `extras/skills/`에 따로 두고 명시 요청 시에만 설치합니다.
 
 ```bash
-git clone https://github.com/epoko77-ai/im-not-ai.git
-cd im-not-ai
+git clone https://github.com/teo713ko-gif/hangul-humanizer.git
+cd hangul-humanizer
 ./install.sh --claude-only --extras
 ```
 
@@ -145,7 +145,7 @@ cd im-not-ai
 
 - **스크립트 설치** — `./uninstall.sh`: 이 저장소를 가리키는 심링크만 제거(직접 둔 파일·각 CLI 홈의 `backups/`·`--copy` 설치본은 보존). `--extras`로 설치한 commit-ko도 함께 정리됩니다.
 - **Claude 마켓플레이스** — `/plugin uninstall humanize-korean`.
-- **GitHub Copilot 마켓플레이스 플러그인** — `copilot plugin uninstall humanize-korean@im-not-ai`.
+- **GitHub Copilot 마켓플레이스 플러그인** — `copilot plugin uninstall humanize-korean@hangul-humanizer`.
 
 ---
 
@@ -173,18 +173,18 @@ Gemini CLI 0.14.0 이상이 필요합니다.
 ### 방법 ① 원격 설치 — 클론 불필요 (권장)
 
 ```bash
-gemini extensions install https://github.com/epoko77-ai/im-not-ai.git
+gemini extensions install https://github.com/teo713ko-gif/hangul-humanizer.git
 ```
 
 - 설치 후 새 세션에서 `/humanize-korean`(또는 `/humanize`), 혹은 자연어 트리거("이 글 AI 티 없애줘"·"이 글 AI 같아?")로 발동.
-- 업데이트: `gemini extensions update im-not-ai`.
-- 제거: `gemini extensions uninstall im-not-ai`.
+- 업데이트: `gemini extensions update hangul-humanizer`.
+- 제거: `gemini extensions uninstall hangul-humanizer`.
 
 ### 방법 ② 클론 + 스크립트
 
 ```bash
-git clone https://github.com/epoko77-ai/im-not-ai.git
-cd im-not-ai
+git clone https://github.com/teo713ko-gif/hangul-humanizer.git
+cd hangul-humanizer
 ./install.sh --gemini-only
 ```
 

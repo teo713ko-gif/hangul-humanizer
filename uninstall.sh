@@ -42,9 +42,9 @@ done
 if command -v gemini >/dev/null 2>&1; then
   echo "Gemini extension 제거 시도..."
   if [ "$DRYRUN" = 1 ]; then
-    echo "+ gemini extensions uninstall im-not-ai (dry-run)"
+    echo "+ gemini extensions uninstall hangul-humanizer (dry-run)"
   else
-    gemini extensions uninstall im-not-ai 2>/dev/null && echo "removed: Gemini extension (im-not-ai)" \
+    gemini extensions uninstall hangul-humanizer 2>/dev/null && echo "removed: Gemini extension (hangul-humanizer)" \
       || echo "  (Gemini extension 미설치 또는 이미 제거됨)"
   fi
 fi

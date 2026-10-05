@@ -1,10 +1,10 @@
-# im-not-ai (Humanize KR) — a de-AI-ifier for Korean text
+# hangul-humanizer (Humanize KR) — a de-AI-ifier for Korean text
 
 > 한국어 문서: [`README.md`](README.md)
 
 LLMs write Korean that *reads* like translated English. Native speakers spot it instantly, and no amount of prompting ("write naturally in Korean") fixes it — the tells are structural, not stylistic.
 
-**im-not-ai** rewrites AI-written Korean into natural Korean **without changing a single fact** — style, rhythm and phrasing only. MIT licensed, runs as a CLI skill inside Claude Code, GitHub Copilot CLI, OpenAI Codex CLI and Gemini CLI.
+**hangul-humanizer** rewrites AI-written Korean into natural Korean **without changing a single fact** — style, rhythm and phrasing only. MIT licensed, runs as a CLI skill inside Claude Code, GitHub Copilot CLI, OpenAI Codex CLI and Gemini CLI.
 
 ```
 "AI 기술을 통해 효율을 높일 수 있다"      →  "AI로 효율을 높일 수 있다"
@@ -80,22 +80,22 @@ Measured: running a 10,000-character piece as 7 chunked calls cost 610K tokens; 
 **Claude Code** (plugin marketplace, no clone):
 
 ```
-/plugin marketplace add epoko77-ai/im-not-ai
-/plugin install humanize-korean@im-not-ai
+/plugin marketplace add teo713ko-gif/hangul-humanizer
+/plugin install humanize-korean@hangul-humanizer
 ```
 
 **GitHub Copilot CLI**:
 
 ```bash
-copilot plugin marketplace add epoko77-ai/im-not-ai
-copilot plugin install humanize-korean@im-not-ai
+copilot plugin marketplace add teo713ko-gif/hangul-humanizer
+copilot plugin install humanize-korean@hangul-humanizer
 ```
 
 **Claude Code / Codex CLI** (clone + script):
 
 ```bash
-git clone https://github.com/epoko77-ai/im-not-ai.git
-cd im-not-ai && ./install.sh
+git clone https://github.com/teo713ko-gif/hangul-humanizer.git
+cd hangul-humanizer && ./install.sh
 ```
 
 Then paste Korean text and ask for it in plain language ("이 글 AI 티 없애줘"), or call `/humanize-korean`. Copilot and Codex run the single-call path only; the multi-call diagnose/finalize paths are Claude Code-specific. Full guide: [`INSTALL.md`](INSTALL.md).
@@ -108,4 +108,4 @@ This is a **Korean writing-quality tool**, not an "AI detector bypass." It is no
 
 MIT — see [`LICENSE`](LICENSE). Integration into other products, forks and commercial use are all permitted; ship the copyright notice and license copy.
 
-Found a tell we don't catch? Open an [Issue](https://github.com/epoko77-ai/im-not-ai/issues) with two or more real examples (ideally from different models, genres or authors) and the taxonomist agent reviews it for promotion. See [`CONTRIBUTORS.md`](CONTRIBUTORS.md).
+Found a tell we don't catch? Open an [Issue](https://github.com/teo713ko-gif/hangul-humanizer/issues) with two or more real examples (ideally from different models, genres or authors) and the taxonomist agent reviews it for promotion. See [`CONTRIBUTORS.md`](CONTRIBUTORS.md).

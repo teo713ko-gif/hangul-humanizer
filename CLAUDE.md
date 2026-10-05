@@ -40,14 +40,14 @@ v2.3부터 `verify_gates.py`가 문자율·진단 목표달성·대구 전멸·g
 ## 디렉토리 구조
 
 ```
-im-not-ai/
+hangul-humanizer/
 ├── CLAUDE.md                      # 본 파일 — 프로젝트 가이드
 ├── README.md / INSTALL.md         # 사용·설치 안내
 ├── RELEASING.md                   # 릴리스 체크리스트 (버전 문자열 전수 + 글로벌 심링크 동기화)
 ├── CONTRIBUTORS.md
 ├── .claude-plugin/                # Claude 플러그인 + 마켓플레이스 매니페스트
 │   ├── plugin.json                # skills: ./skills/ · 에이전트는 루트 agents/ 자동탐색
-│   └── marketplace.json           # /plugin marketplace add epoko77-ai/im-not-ai
+│   └── marketplace.json           # /plugin marketplace add teo713ko-gif/hangul-humanizer
 ├── gemini-extension.json          # Gemini CLI Extension 매니페스트
 ├── GEMINI.md                      # Gemini 에이전트 컨텍스트 (monolith 룰 인라인)
 ├── commands/                      # Gemini CLI 커스텀 명령 (/humanize-korean, /humanize, /humanize-scan, /humanize-redo)

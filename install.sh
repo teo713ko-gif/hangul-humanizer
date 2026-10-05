@@ -262,7 +262,7 @@ if [ "$DO_GEMINI" != no ] && { [ "$DO_GEMINI" = yes ] || command -v gemini >/dev
     echo "+ gemini extensions link $REPO (dry-run)"
   else
     echo "gemini extensions link \"$REPO\" 실행 (확장 등록)..."
-    echo "Y" | gemini extensions link "$REPO" 2>/dev/null && echo "installed: Gemini extension (im-not-ai)" \
+    echo "Y" | gemini extensions link "$REPO" 2>/dev/null && echo "installed: Gemini extension (hangul-humanizer)" \
       || echo "  (이미 등록됨 또는 수동 등록 필요: gemini extensions link $REPO)"
   fi
 else

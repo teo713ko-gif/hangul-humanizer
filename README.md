@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/social-preview.png" alt="im-not-ai — 한글 AI 티 제거기" width="820">
+  <img src="assets/social-preview.png" alt="hangul-humanizer — 한글 AI 티 제거기" width="820">
 </p>
 
 # Humanize KR — 한글 AI 티 제거기 v2.3.2
@@ -17,20 +17,20 @@ AI(ChatGPT · Claude · Gemini 등)가 쓴 한글 글을 **내용은 한 글자�
 **GitHub Copilot CLI — 플러그인 마켓플레이스 (클론 불필요, 권장)**
 
 ```bash
-copilot plugin marketplace add epoko77-ai/im-not-ai
-copilot plugin install humanize-korean@im-not-ai
+copilot plugin marketplace add teo713ko-gif/hangul-humanizer
+copilot plugin install humanize-korean@hangul-humanizer
 copilot plugin list
 ```
 
-Copilot에서 `humanize-korean 스킬로 이 글의 AI 티를 없애줘:`처럼 요청하거나 `/skills list`로 로드 여부를 확인하세요. 업데이트는 `copilot plugin update humanize-korean@im-not-ai`, 제거는 `copilot plugin uninstall humanize-korean@im-not-ai`입니다. Copilot은 **단일 호출 경로만** 제공하며 Claude Code 전용 진단·finalize 다중 호출 경로는 실행하지 않습니다.
+Copilot에서 `humanize-korean 스킬로 이 글의 AI 티를 없애줘:`처럼 요청하거나 `/skills list`로 로드 여부를 확인하세요. 업데이트는 `copilot plugin update humanize-korean@hangul-humanizer`, 제거는 `copilot plugin uninstall humanize-korean@hangul-humanizer`입니다. Copilot은 **단일 호출 경로만** 제공하며 Claude Code 전용 진단·finalize 다중 호출 경로는 실행하지 않습니다.
 
-> 호환성 참고: 1.0.79-5에서는 `copilot plugin install epoko77-ai/im-not-ai`도 동작하지만, CLI가 저장소 직접 설치의 사용 중단 예정 경고를 표시합니다. 신규 설치 경로로는 권장하지 않습니다.
+> 호환성 참고: 1.0.79-5에서는 `copilot plugin install teo713ko-gif/hangul-humanizer`도 동작하지만, CLI가 저장소 직접 설치의 사용 중단 예정 경고를 표시합니다. 신규 설치 경로로는 권장하지 않습니다.
 
 **Claude Code — 플러그인 마켓플레이스 (클론 불필요, 권장)**
 
 ```
-/plugin marketplace add epoko77-ai/im-not-ai
-/plugin install humanize-korean@im-not-ai
+/plugin marketplace add teo713ko-gif/hangul-humanizer
+/plugin install humanize-korean@hangul-humanizer
 ```
 
 새 세션에서 `/humanize-korean` (또는 자연어로 "이 글 AI 티 없애줘").
@@ -38,8 +38,8 @@ Copilot에서 `humanize-korean 스킬로 이 글의 AI 티를 없애줘:`처럼 
 **Claude Code · Codex CLI — 클론 + 스크립트**
 
 ```bash
-git clone https://github.com/epoko77-ai/im-not-ai.git
-cd im-not-ai
+git clone https://github.com/teo713ko-gif/hangul-humanizer.git
+cd hangul-humanizer
 ./install.sh            # 설치된 claude/codex 자동 감지 → 전역 심링크
 ```
 
@@ -161,8 +161,8 @@ codex --version
 ### 1. 리포 받기
 
 ```bash
-git clone https://github.com/epoko77-ai/im-not-ai.git
-cd im-not-ai
+git clone https://github.com/teo713ko-gif/hangul-humanizer.git
+cd hangul-humanizer
 ```
 
 ### 2. Claude Code 또는 Codex 실행
@@ -175,7 +175,7 @@ codex
 ```
 
 > **전역 설치를 했다면** 아무 폴더에서나 Claude Code의 `/humanize-korean` 또는 Codex의 `$humanize-korean`을 사용할 수 있습니다([설치](#설치-install) 참고).
-> **설치 없이 Claude Code로 체험만 하려면** 방금 클론한 `im-not-ai` 폴더 안에서 실행하세요. Codex는 `./install.sh --codex-only`로 스킬을 먼저 연결합니다.
+> **설치 없이 Claude Code로 체험만 하려면** 방금 클론한 `hangul-humanizer` 폴더 안에서 실행하세요. Codex는 `./install.sh --codex-only`로 스킬을 먼저 연결합니다.
 
 ### 3. AI가 쓴 한글 글 붙여넣고 부탁하기
 
@@ -213,8 +213,8 @@ Claude Code 사용자는 방법 A~C를, GitHub Copilot CLI 사용자는 방법 D
 본체가 이제 Claude Code Plugin/Marketplace를 **공식 지원**합니다. 클론 없이 마켓플레이스로 설치하세요:
 
 ```
-/plugin marketplace add epoko77-ai/im-not-ai
-/plugin install humanize-korean@im-not-ai
+/plugin marketplace add teo713ko-gif/hangul-humanizer
+/plugin install humanize-korean@hangul-humanizer
 ```
 
 스킬 3개 + 서브에이전트 9개가 함께 설치됩니다. 자세한 옵션·스크립트 설치는 [설치](#설치-install) 섹션과 [`INSTALL.md`](INSTALL.md) 참고. (초기 패키징을 탐색한 [`gaebalai/im-not-ai`](https://github.com/gaebalai/im-not-ai) 포크도 있습니다.)
@@ -224,24 +224,24 @@ Claude Code 사용자는 방법 A~C를, GitHub Copilot CLI 사용자는 방법 D
 GitHub Copilot CLI 1.0.79-5에서 마켓플레이스 설치와 스킬 탐색을 확인했습니다.
 
 ```bash
-copilot plugin marketplace add epoko77-ai/im-not-ai
-copilot plugin install humanize-korean@im-not-ai
+copilot plugin marketplace add teo713ko-gif/hangul-humanizer
+copilot plugin install humanize-korean@hangul-humanizer
 copilot plugin list
 copilot skill list
 ```
 
-새 Copilot 세션에서 `humanize-korean 스킬로 이 글을 자연스럽게 윤문해줘:` 또는 `이 글 AI 티 없애줘:`처럼 요청합니다. `/skills list`에서도 스킬을 확인할 수 있습니다. 업데이트는 `copilot plugin update humanize-korean@im-not-ai`, 제거는 `copilot plugin uninstall humanize-korean@im-not-ai`을 사용하세요.
+새 Copilot 세션에서 `humanize-korean 스킬로 이 글을 자연스럽게 윤문해줘:` 또는 `이 글 AI 티 없애줘:`처럼 요청합니다. `/skills list`에서도 스킬을 확인할 수 있습니다. 업데이트는 `copilot plugin update humanize-korean@hangul-humanizer`, 제거는 `copilot plugin uninstall humanize-korean@hangul-humanizer`을 사용하세요.
 
 Copilot은 별도의 **단일 호출 경로**를 사용합니다. Claude Code와 Codex가 제공하는 `route_hint` 3경로 오케스트레이션과 진단·finalize 역할 실행은 Copilot에서 수행하지 않습니다.
 
-> 저장소 직접 설치 명령 `copilot plugin install epoko77-ai/im-not-ai`은 1.0.79-5에서 동작하지만 사용 중단 예정 경고가 표시되는 호환성 경로입니다.
+> 저장소 직접 설치 명령 `copilot plugin install teo713ko-gif/hangul-humanizer`은 1.0.79-5에서 동작하지만 사용 중단 예정 경고가 표시되는 호환성 경로입니다.
 
 **방법 E — Codex CLI (공식, 전체 경로)**
 
 본체가 이제 Codex CLI Skills를 **공식 지원**합니다. 리포 클론 후 한 줄이면 `~/.codex/skills/`에 연결됩니다:
 
 ```bash
-git clone https://github.com/epoko77-ai/im-not-ai.git && cd im-not-ai
+git clone https://github.com/teo713ko-gif/hangul-humanizer.git && cd hangul-humanizer
 ./install.sh --codex-only
 ```
 
@@ -770,7 +770,7 @@ v1.2는 코드 변경이 거의 없고 대부분 문서·정책·schema 추가�
 
 ## 기여
 
-새로운 AI 티 패턴이나 회귀 사례를 발견했다면 [Issue](https://github.com/epoko77-ai/im-not-ai/issues)로 보고해 주세요. 실증 사례 2건 이상(가능하면 서로 다른 모델·장르·작가)이 함께면 분류학자 에이전트가 점검 회차에서 본진([`ai-tell-taxonomy.md`](skills/humanize-korean/references/ai-tell-taxonomy.md))으로 승격합니다. v1.3에서 운영했던 candidate pool은 핫패스 비용 문제로 v1.5에서 제거됐고, 외부 보고는 Issue 채널로 단순화됐습니다.
+새로운 AI 티 패턴이나 회귀 사례를 발견했다면 [Issue](https://github.com/teo713ko-gif/hangul-humanizer/issues)로 보고해 주세요. 실증 사례 2건 이상(가능하면 서로 다른 모델·장르·작가)이 함께면 분류학자 에이전트가 점검 회차에서 본진([`ai-tell-taxonomy.md`](skills/humanize-korean/references/ai-tell-taxonomy.md))으로 승격합니다. v1.3에서 운영했던 candidate pool은 핫패스 비용 문제로 v1.5에서 제거됐고, 외부 보고는 Issue 채널로 단순화됐습니다.
 
 **외부 데이터 raw text 보존 정책 (v1.5~)** — 외부 매체 글(예: 뉴스 기사·블로그)을 검증 데이터로 제출할 때, 직접 raw text 인용이 저작권상 부담스러우면 **분석 노트만 보존하지 말고 안전한 인용 단위(문단 1~2개) + 출처 URL을 같이** 남겨주세요. v1.3 회차 2 뉴스핌 GPT 데이터가 분석 노트만 보존되고 raw text가 떨어져 v1.5 회귀 검증에서 재사용 불가했던 사례가 있었습니다. URL이 만료되면 검증 자산 자체가 사라지므로, fair use 범위의 짧은 인용 + URL 동시 보존이 권장됩니다.
 

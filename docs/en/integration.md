@@ -75,4 +75,4 @@ See [`evidence.md`](evidence.md) for how each of these was measured, including t
 1. Read [`quick-rules.en.md`](quick-rules.en.md) — that is the working artifact.
 2. Read [`evidence.md`](evidence.md) — decide for yourself whether the rules are load-bearing.
 3. Full taxonomy with detection conditions and worked examples: [`skills/humanize-korean/references/ai-tell-taxonomy.md`](../../skills/humanize-korean/references/ai-tell-taxonomy.md) (Korean; the pattern strings are the asset and are not translated).
-4. Questions, or a tell we don't catch: [Issues](https://github.com/epoko77-ai/im-not-ai/issues).
+4. Questions, or a tell we don't catch: [Issues](https://github.com/teo713ko-gif/hangul-humanizer/issues).

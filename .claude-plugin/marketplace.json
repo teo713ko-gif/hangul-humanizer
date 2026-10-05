@@ -1,7 +1,7 @@
 {
-  "name": "im-not-ai",
+  "name": "hangul-humanizer",
   "owner": {
-    "name": "epoko77-ai"
+    "name": "teo713ko-gif"
   },
   "metadata": {
     "description": "AI가 쓴 한글 텍스트를 사람이 쓴 글처럼 윤문하는 humanize-korean 스킬 마켓플레이스",
