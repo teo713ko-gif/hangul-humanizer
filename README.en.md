@@ -28,7 +28,7 @@ Engineers integrating this should start with `integration.md`.
 
 English humanizers (QuillBot, Undetectable AI, Hix) are weak on Korean because the giveaway isn't word choice — it's **translationese**: English syntax wearing Korean morphology. Double passives, `~를 통해` for every English "through/via", left-branching relative clauses imported from English, compulsive third-person pronouns (Korean normally drops them), mechanical "first / second / third" scaffolding, and a closing paragraph that always "carries significant implications."
 
-We catalogued these as **10 categories × 85 sub-patterns**, each with a severity (S1 decisive / S2 strong / S3 weak) and a prescription, grounded in Korean translation-studies literature (KatFish, post-editese metrics, Wendler et al. ACL'24, Lost in Literalism ACL'25).
+We catalogued these as **10 categories × 86 sub-patterns**, each with a severity (S1 decisive / S2 strong / S3 weak) and a prescription, grounded in Korean translation-studies literature (KatFish, post-editese metrics, Wendler et al. ACL'24, Lost in Literalism ACL'25).
 
 | ID | Category | Example tells |
 |----|----------|---------------|
